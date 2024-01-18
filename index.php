@@ -13,18 +13,14 @@ function showOptions(array $activities): void {
 }
 
 function checkOptionInput(int $activities_count,string $option): bool {
-	return is_int($option) && $option > 0 && $ 
-}
-
-function getRandomStudent(array $students): int {
-	return rand(0,count($students)-1);
+	return is_numeric($option) && $option > 0 && $option <= $activities_count;
 }
 
 showOptions($activities);
 $activity_index = readline("Hei! Quina activitat vols assignar?(Introdueix la opció numèrica)");
 
-if(checkOptionInput(count($activities),$activity_index) {
-	$student_index = getRandomStudent($students);
+if(checkOptionInput(count($activities),$activity_index)) {
+	$student_index = array_rand($students);
 	echo "Li toca a ".$students[$student_index]." fer ".$activities[($activity_index)-1]." felicitats!!"; 
 }
 

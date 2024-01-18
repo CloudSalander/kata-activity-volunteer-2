@@ -23,6 +23,8 @@ Ara necessitem que els/les alumnes els carregui directament d'un JSON que tindr�
 ]}
 ```
 
+**IMPORTANT: NO HEU DE PUJAR l'arxiu JSON a github, o al menys, no amb dades sensibles :)**
+
  A partir d'aquest arxiu on figurin els alumnes actuals de l'aula, carregar l'informació al nostre programa.
 
 L'**output** haurà de ser el mateix:

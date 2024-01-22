@@ -6,8 +6,8 @@
 */
 include('files/activities.php');
 
-function LoadStudents() : array {
-	$str = file_get_contents('./files/students.json');
+function LoadStudents(string $file_route) : array {
+	$str = file_get_contents($file_route);
 	$array = json_decode($str, true);
 	return $array['alumnes'];
 }
@@ -22,8 +22,7 @@ function checkOptionInput(int $activities_count,string $option): bool {
 	return is_numeric($option) && $option > 0 && $option <= $activities_count;
 }
 
-
-$students = LoadStudents();
+$students = LoadStudents($argv[1]);
 showOptions($activities);
 $activity_index = readline("Hei! Quina activitat vols assignar?(Introdueix la opció numèrica)");
 
